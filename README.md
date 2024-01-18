@@ -1,2 +1,2 @@
 # tarefas-ebac
-repositório para incluir tarefas d curso de profissão de qualidade EBAC
+repositório para incluir tarefas do curso de profissão de qualidade EBAC
