@@ -8,26 +8,20 @@ Para depois inserir no carrinho
   Contexto: 
     Dado que o cliente EBAC-SHOP escolheu um produto
 
-  Cenário: Apenas cor selecionada
-    Quando selecionar uma cor
-    E clicar em comprar
-    Então deve  alertar que falta preencher tamnho e quantidade
 
-  Cenário: Apenas tamanho selecionado
-    Quando selecionar um tamanho
+  Esquema do Cenário:  Selecionar apenas uma opção
+   Quando selecionar uma <param<1>
     E clicar em comprar
-    Então deve alertar que falta preencher cor e quantidade
+    Então deve  alertar que falta preencher <param_2> e <param_3>
 
-  Cenário: Apenas quantidade selecionada
-    Quando selecionar uma cor
-    E clicar em comprar
-    Então deve alertar que falta preencher tamnho e cor
-
+      Exemplos: 
+      | param_1      | param_2   | param_3      |
+      | "cor"        | "tamanho" | "quantidade" |
+      | "tamanho"    | "cor"     | "quantidade" |
+      | "quantidade" | "tamanho" | "cor"        |
+    
   Cenário: Todos as opções selecionadas
-    Quando selecionar o tamanho
-    E selecionar a cor
-    E selecionar a quantidade
-    E clicar em comprar
+    Quando slecionar as 3 opções obrigtórias
     Então o produto deve ser inserido no carrinho
 
   Esquema do Cenário: Combinações de seleção
