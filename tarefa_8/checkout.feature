@@ -12,9 +12,13 @@ Para finalizar minha compra
     E clicar em Finalizar compra
     Então o cadastro deve ser realizado com sucesso
 
-  Esquema do Cenário: Cadastro obrigatório com falha
+  Cenário: Cadastro obrigatório com falha
     Quando finalizar a compra sem preencher algum campo obigatório
     Então o sistema deve exibir mensagem de alerta "Preencha todos os campos"
+
+  Cenário: Cadastro sem preencher campos não obrigatório 
+    Quando finalizar a compra sem preencher algum campo não obigatório
+    Então o cadastro deve ser finalizado com sucesso
 
   Cenário: Mensagem de erro para e-mai inválido
     Dado um cliente que tenha preenchido dos os campos obrigatótios do cadastro
